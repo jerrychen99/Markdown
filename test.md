@@ -49,8 +49,35 @@
 >    - 编辑工具：VS Code Markdown Preview Enhanced
 >    - bash 脚本语言 （平行运算处理调参数有使用过）
 >2. git命令行与工具
->    - empty
->    - empty
+>```mermaid
+>flowchart TD
+>
+>第一次创建仓库 -->
+>A1["cd 到目录"] --> A2["git init"]
+>A2 --> A3["git add (file)"]
+>A3 --> A4["git commit -m 'explain'"]
+>A4 --> A5["git branch -M main"]
+>A5 --> A6["git remote add origin (URL)"]
+>A6 --> A7["git push -u origin main"]
+>
+>之后的修改 -->
+>B1["git status 查看修改"] --> B2["git add (file)"]
+>B2 --> B3["git commit -m 'explain'"]
+>B3 --> B4["git log 查看历史"]
+>B4 --> B5["git push 推送远程"]
+>
+>个人-->
+>C1["git branch --show-current 查看分支"] --> C2["git remote -v 查看远端"]
+>C2 --> C3["git pull 更新本地仓库"]
+>
+>团队协作-->
+>D1["在 GitHub 上 Fork 官方仓库到自己账号"] --> D2["Clone 到本地"]
+>D2 --> D3["git fetch 从官方仓库获取更新"]
+>D3 --> D4["git pull 将更新整合到本地"]
+>D4 --> D5["git add + commit + push 到自己的 fork"]
+>D5 --> D6["在 GitHub 提 Pull Request 回官方仓库"]
+>```
+>    
 >3. 基本MIDI协议
 >    - 可选择乐器调试音色、力度、持续时间
 >    - Note on delta = 0 为立刻发出声音
